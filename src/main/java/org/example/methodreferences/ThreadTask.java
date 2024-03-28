@@ -1,6 +1,6 @@
-package org.example;
+package org.example.methodreferences;
 
-import org.example.model.Student;
+import org.example.methodreferences.model.Student;
 
 public class ThreadTask {
 

@@ -1,4 +1,4 @@
-package org.example.model;
+package org.example.methodreferences.model;
 
 public class Student {
     // Properties
@@ -22,6 +22,8 @@ public class Student {
     public Student() {
         System.out.println("creating new student");
     }
+
+
 
     // Getter methods
     public String getName() {

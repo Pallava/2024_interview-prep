@@ -1,7 +1,7 @@
-package org.example;
+package org.example.methodreferences;
 
-import org.example.interfaces.StudentProvider;
-import org.example.model.Student;
+import org.example.methodreferences.interfaces.StudentProvider;
+import org.example.methodreferences.model.Student;
 
 public class MethodReference {
 
@@ -24,9 +24,14 @@ public class MethodReference {
         t2.start();
 
         //constructor reference
+        //Student::new -> calls the constructor with params
+
         ThreadTask task3 = new ThreadTask();
         StudentProvider provider = Student::new;
-        provider.getStudent();
+        System.out.println(
+                provider.createStudent("Pallava",
+                        30,1,"A001","male","CS"));
+
 
 
     }
