@@ -8,7 +8,7 @@ import java.util.function.Supplier;
 
 public class MethodReference {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         System.out.println("Method reference");
         //static method reference
         //Referencing static method of ThreadTask ,
@@ -29,7 +29,7 @@ public class MethodReference {
         //constructor reference
         //Student::new -> calls the constructor with params
 
-        ThreadTask task3 = new ThreadTask();
+
         StudentProvider provider = Student::new;
         System.out.println(
                 provider.createStudent("Pallava",

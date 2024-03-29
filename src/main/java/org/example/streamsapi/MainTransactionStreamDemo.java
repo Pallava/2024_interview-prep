@@ -13,7 +13,7 @@ public class MainTransactionStreamDemo {
 
     public static void main(String[] args) {
 
-        SetUp setUp = new SetUp();
+        new SetUp();
         //Question 1: Get transaction in 2011 and sort by value.
         getTr2011();
         //Question 2:Get all the cities of all the traders.
@@ -47,7 +47,7 @@ public class MainTransactionStreamDemo {
     private static void groupTransactionByCurr() {
       Map<Currency , List<Transactions>> map=  SetUp.getTransactions().stream()
                 .collect(Collectors.groupingBy(Transactions::getCurrency));
-      map.entrySet().stream().forEach(System.out::println);
+      map.entrySet().forEach(System.out::println);
 
     }
 
@@ -55,7 +55,7 @@ public class MainTransactionStreamDemo {
         System.out.println("Get Smallest transaction");
         Optional<Transactions> min=  SetUp.getTransactions().stream()
                 .min(Comparator.comparing(Transactions::getValue));
-        System.out.println(min.get());
+        System.out.println(min.isPresent() ? min.get() : "not present");
 
 
     }

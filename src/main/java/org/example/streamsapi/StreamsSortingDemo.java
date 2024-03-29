@@ -2,7 +2,7 @@ package org.example.streamsapi;
 
 import java.util.Comparator;
 import java.util.List;
-import java.util.function.Function;
+
 import java.util.stream.Collectors;
 
 public class StreamsSortingDemo {
@@ -13,7 +13,7 @@ public class StreamsSortingDemo {
 
 
 
-        List<Integer> sortedList = list1.stream().sorted((a,b) -> b.compareTo(a)).collect(Collectors.toList());
+        List<Integer> sortedList = list1.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
         List<Integer> sortedList1 =  list1.stream().sorted(Comparator.naturalOrder()).collect(Collectors.toList());
         System.out.println(sortedList1);
         System.out.println(sortedList);
