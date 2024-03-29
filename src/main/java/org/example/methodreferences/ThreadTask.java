@@ -2,6 +2,8 @@ package org.example.methodreferences;
 
 import org.example.methodreferences.model.Student;
 
+import java.time.LocalDate;
+
 public class ThreadTask {
 
 
@@ -35,6 +37,12 @@ public class ThreadTask {
         public Student getStudent(){
 
         return new Student("pallava",34,1,"A001","Male","CSE");
+
+        }
+
+        public static LocalDate getDate(){
+
+        return LocalDate.of(2024,11,23);
 
         }
 

@@ -3,6 +3,9 @@ package org.example.methodreferences;
 import org.example.methodreferences.interfaces.StudentProvider;
 import org.example.methodreferences.model.Student;
 
+import java.time.LocalDate;
+import java.util.function.Supplier;
+
 public class MethodReference {
 
     public static void main(String[] args) throws InterruptedException {
@@ -31,6 +34,9 @@ public class MethodReference {
         System.out.println(
                 provider.createStudent("Pallava",
                         30,1,"A001","male","CS"));
+
+
+        Supplier<LocalDate> s = ThreadTask::getDate;
 
 
 
