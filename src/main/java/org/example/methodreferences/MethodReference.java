@@ -18,7 +18,11 @@ public class MethodReference {
         Thread t1 = new Thread(runnable);
         t1.start();
 
-
+        Runnable r = ()->{
+            System.out.println("run------------");
+        };
+        Thread t4 = new Thread(r);
+        t4.start();
         //instance methods reference
         //needs to call on the object of the class
         ThreadTask task2 = new ThreadTask();
