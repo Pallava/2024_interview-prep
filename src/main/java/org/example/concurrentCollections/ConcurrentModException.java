@@ -13,7 +13,8 @@ public class ConcurrentModException {
 
         for (String name: names) {
 
-            names.remove(name);
+
+            names.add(name);
 
         }
 
